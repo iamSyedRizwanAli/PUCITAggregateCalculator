@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
+    tools:context="com.arnex.pucitacademiccalculator.Activity2c">
+
+    <EditText
+        android:id="@+id/prevCGPAet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your previous CGPA"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/prevCrHrsET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your previous total credit hours"
+        android:layout_below="@+id/prevCGPAet"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/currGPAet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your current GPA"
+        android:layout_below="@+id/prevCrHrsET"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/currCrHrsET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your current semester credit hours"
+        android:layout_below="@+id/currGPAet"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/calculateButtonAct3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:textSize="20sp"
+        android:layout_below="@+id/currCrHrsET"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/gpaTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your CGPA is: "
+        android:layout_below="@id/calculateButtonAct3"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        />
+
+    <TextView
+        android:id="@+id/cgpa2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calculateButtonAct3"
+        android:layout_toRightOf="@+id/gpaTitle3"
+        android:text="0.00"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>

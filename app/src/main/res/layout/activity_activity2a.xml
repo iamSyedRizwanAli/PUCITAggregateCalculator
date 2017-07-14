@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
+    tools:context="com.arnex.pucitacademiccalculator.Activity2a">
+
+    <TextView
+        android:id="@+id/subjectsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subject(s)"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_margin="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credit Hours"
+        android:layout_alignParentRight="true"
+        android:textColor="#000"
+        android:textSize="20sp"
+        />
+
+    <ScrollView
+        android:layout_below="@+id/subjectsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp">
+
+        <RelativeLayout
+            android:id="@+id/subjectsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/subjects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/subSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Discard a Subject"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/subjects"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/addSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add Subject"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/subjects"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/calculateButtonAct1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:textSize="20sp"
+                android:layout_below="@+id/addSubject"/>
+
+            <TextView
+                android:id="@+id/gpaTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your GPA is: "
+                android:layout_below="@id/calculateButtonAct1"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                />
+
+            <TextView
+                android:id="@+id/gpa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calculateButtonAct1"
+                android:layout_toRightOf="@+id/gpaTitle"
+                android:text="0.00"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
